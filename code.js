@@ -1,8 +1,8 @@
 function getOtp() {
-    const pin = generateOtp();
+    const Otp = generateOtp();
     const OtpString = Otp + '';
     if (OtpString.length === 4) {
-        return pin;
+        return Otp;
     }
     else {
         // console.log('3 digit otp not found, Otp');
@@ -14,5 +14,9 @@ function generateOtp() {
     return random;
 }
 document.getElementById('generate-Otp').addEventListener('click', function () {
+    const Otp = getOtp();
+    // display Otp 
+    const displayOtpField = document.getElementById('display-Otp');
+    displayOtpField.value = Otp;
 
 })
