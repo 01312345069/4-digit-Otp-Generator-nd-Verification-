@@ -20,3 +20,15 @@ document.getElementById('generate-Otp').addEventListener('click', function () {
     displayOtpField.value = Otp;
 
 })
+
+document.getElementById('calculator').addEventListener('click', function () {
+    const number = event.target.innerText;
+    if (isNaN(number)) {
+        console.log(number);
+    } else {
+        const typedNumberField = document.getElementById('typed-numbers');
+        const previousTypedNumber = typedNumberField.value;
+        const newTypedNumber = previousTypedNumber + number;
+        typedNumberField.value = newTypedNumber;
+    }
+})
