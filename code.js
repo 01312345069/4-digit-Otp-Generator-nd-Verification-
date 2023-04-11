@@ -41,3 +41,17 @@ document.getElementById('calculator').addEventListener('click', function (event)
         typedNumberField.value = newTypedNumber;
     }
 })
+document.getElementById('verify-otp').addEventListener('click', function () {
+    const displayOtpField = document.getElementById('display-Otp');
+    const currentOtp = displayOtpField.value;
+
+    const typedNumberField = document.getElementById('typed-numbers');
+    const typedNumber = typedNumberField.value;
+
+    if (typedNumber === currentOtp) {
+        console.log('correct pin')
+    }
+    else {
+        console.log('incorrect pin')
+    }
+})
