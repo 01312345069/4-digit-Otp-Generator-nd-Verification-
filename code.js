@@ -48,10 +48,18 @@ document.getElementById('verify-otp').addEventListener('click', function () {
     const typedNumberField = document.getElementById('typed-numbers');
     const typedNumber = typedNumberField.value;
 
+    const otpSuccessMessage = document.getElementById('otp-success');
+    const otpUnSuccessMessage = document.getElementById('otp-unsuccess');
+
     if (typedNumber === currentOtp) {
-        console.log('correct pin')
+
+        otpSuccessMessage.style.display = 'block';
+        otpUnSuccessMessage.style.display = 'none';
     }
     else {
-        console.log('incorrect pin')
+
+        otpUnSuccessMessage.style.display = 'block';
+        otpSuccessMessage.style.display = 'none';
+
     }
 })
